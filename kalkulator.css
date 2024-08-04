@@ -1,0 +1,168 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+  display: flex;
+  font-family: "Dosis", sans-serif;
+  font-display: swap;
+  height: inherit;
+  justify-content: center;
+}
+
+.wrapper {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.01);
+  color: #232323;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  flex-basis: 90%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.screen {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.01);
+  color: #232323;
+  font-size: 35px;
+  overflow: auto;
+  padding: 20px;
+  text-align: right;
+  width: 100%;
+}
+
+.calc-buttons {
+  width: 100%;
+}
+
+.calc-buttons-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
+}
+
+.calc-button {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.01);
+  color: #232323;
+  flex-basis: 20%;
+  font-family: inherit;
+  font-size: 24px;
+  height: 65px;
+}
+
+.calc-button:last-child {
+  background: #d72880;
+  color: #fff;
+}
+
+.calc-button:last-child:hover {
+  background-color: inherit;
+  color: inherit;
+}
+
+.calc-button:hover {
+  background-color: inherit;
+}
+
+.calc-button:active {
+  background-color: #ffef78;
+}
+
+.double {
+  flex-basis: 47%;
+}
+
+.triple {
+  flex-basis: 73%;
+}
+
+.history-wrapper {
+  margin-top: 20px;
+}
+
+.history-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history-list li {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  border-radius: 8px;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.clear-history {
+  background: #d72880;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  /* Menjamin kalkulator responsif */
+  .wrapper {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .screen {
+    width: 100%;
+    font-size: 2em; /* Sesuaikan ukuran font jika perlu */
+    text-align: right;
+  }
+
+  .calc-buttons {
+    width: 100%;
+  }
+
+  .calc-buttons-row {
+    flex-wrap: wrap;
+    margin: 5px 0;
+  }
+
+  .calc-button {
+    flex: 1;
+    margin: 2px;
+    box-sizing: border-box;
+    font-size: 1.5em; /* Sesuaikan ukuran font jika perlu */
+    height: 60px;
+  }
+
+  .history-wrapper {
+    max-height: 100px; /* Atur tinggi maksimal */
+    overflow-y: auto; /* Tambahkan scroll jika perlu */
+  }
+}
